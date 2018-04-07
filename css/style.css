@@ -257,7 +257,47 @@ i:hover {
   font-weight: 200;
 }
 
+#quotes{
+  padding-top: 3rem !important;
+  padding-bottom: 5rem !important;
+  padding-left: 270px !important;
+  border-bottom: 1px solid #dee2e6;
+}
 
+#quotes h1{
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+#quotes h2{
+  padding-top: 3rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#quotes h3{
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+#quotes h4{
+  font-size: 2rem;
+  font-weight: 200;
+
+}
+#quotes p{
+  font-size: 2rem;
+  font-weight: 200;
+  color: black;
+
+}
+
+#entryform h1{
+  font-size: 6rem;
+  font-weight: 700;
+  padding-top: 3rem !important;
+  padding-bottom: 5rem !important;
+}
 
 /* ---------------------------------------------------
     MEDIAQUERIES
