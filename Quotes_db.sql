@@ -11,6 +11,6 @@ CREATE TABLE IF NOT EXISTS quotes(
 	q_descr	TEXT);
 
 
+-- EX:
 INSERT INTO quotes(quote, author, q_date, q_descr)
-VALUES	('I ate my New Jersey voters ballet', 'James Corcoran', '2017-11-12', 'n/a'),
-				('I’m just trying to find 13 year olds', 'Jahnke', '2018-2-25', 'playing fortnite');
+VALUES	('Hello', 'James Corcoran', '2017-11-12', 'n/a');

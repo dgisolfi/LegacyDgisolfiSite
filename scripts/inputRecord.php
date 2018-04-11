@@ -16,13 +16,17 @@ function insert_quote_record($dbc) {
 
 	if($q_descr == null){
 		$q_descr = "n/a";
+
 }
 
 	$query = "INSERT INTO quotes(author, quote, q_date, q_descr) VALUES('" . $author . "','" . $quote . "','" . $q_date . "','" . $q_descr . "')";
 	$result = mysqli_query($dbc, $query);
 	check_results($result);
 	//alert user
-	echo '<div id="entryform"><h2>Quote Added!</h2></div>';
+	// echo '<div id="entryform"><h2>Quote Added!</h2></div>';
+
+
+	// email();
 
 	//reset all vals to reset for new input
 	$_POST['author'] = null;
@@ -31,4 +35,12 @@ function insert_quote_record($dbc) {
 	$_POST['q_descr'] = null;
 
 }
+
+
+//function backupData (){
+	// if ((int strlen ( string $string ) >= 69){
+  //
+	// }
+//
+//}
 ?>

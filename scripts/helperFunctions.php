@@ -4,7 +4,7 @@ Authors:  Daniel Gisolfi
 Version 1.0 -->
 
 <?php
-require('scripts/connect_db.php');
+require('../scripts/connect_db.php');
 
 #Return an SQL error to the site if one exits
 function check_results($results) {
