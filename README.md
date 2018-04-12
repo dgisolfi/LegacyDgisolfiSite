@@ -15,7 +15,7 @@ All requirements to run an instance of this project
 
 ## Deployment
 
-Currently this site exists on a Digital Ocean droplet. The droplet is pointed at the domain name: [dgisolfi.xyz](dgisolfi.xyz)
+Currently this site exists on a Digital Ocean droplet. The droplet is pointed at the domain name: [dgisolfi.xyz](http://www.dgisolfi.xyz/sites/dgisolfi.php)
 
 ## Goals
 
