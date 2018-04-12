@@ -9,7 +9,7 @@ Daniel Gisolfi - All current work - dgisolfi
 
 All requirements to run an instance of this project
 
-- Bootstrap 3
+- CSS Grid
 - HTML 5
 - Digital Ocean or an equivalent service
 
