@@ -13,7 +13,7 @@ function show_quote_records($dbc) {
 	# Execute the query
 	$results = mysqli_query($dbc, $query);
 	check_results($results);
-	
+
 	# Show results
 	if($results){
 
@@ -29,10 +29,11 @@ function show_quote_records($dbc) {
 		echo '</form>';
       	echo '<h2 class="card-author">' . $row['author'] . '</h2>';
       	echo '<p>' . $row['quote'] . '<p>';
-				echo '<p>' . $row['q_date'] . '</p>';
-				if(!($row['q_descr'] == "n/a")){
-					echo '<p>' . $row['q_descr'] . '<p>';
-				}
+		if(!($row['q_descr'] == "n/a")){
+			echo '<p>' . $row['q_descr'] . '<p>';
+		}
+		echo '<p>' . $row['q_date'] . '</p>';
+
 		echo '	</div>';
 		echo ' </div>';
 		echo '</li>';

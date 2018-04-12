@@ -17,16 +17,20 @@ function insert_quote_record($dbc) {
 	if($q_descr == null){
 		$q_descr = "n/a";
 
+	$devilChar = "'";
+
+	//remove all occurences of: '
+	$search = strpos($quote, $devilChar);
+
+	if ($search > 0){
+		$str = str_replace("'", "`", $quote);
+		$quote = $str;
+	}
 }
 
 	$query = "INSERT INTO quotes(author, quote, q_date, q_descr) VALUES('" . $author . "','" . $quote . "','" . $q_date . "','" . $q_descr . "')";
 	$result = mysqli_query($dbc, $query);
 	check_results($result);
-	//alert user
-	// echo '<div id="entryform"><h2>Quote Added!</h2></div>';
-
-
-	// email();
 
 	//reset all vals to reset for new input
 	$_POST['author'] = null;
@@ -34,13 +38,33 @@ function insert_quote_record($dbc) {
 	$_POST['q_date'] = null;
 	$_POST['q_descr'] = null;
 
+	// backupData($dbc);
 }
 
 
-//function backupData (){
-	// if ((int strlen ( string $string ) >= 69){
-  //
-	// }
-//
-//}
+function backupData($dbc){
+	// the message
+	$records = array();
+	$msg = "";
+
+	$query = "SELECT * FROM quotes ORDER BY q_id DESC";
+
+	# Execute the query
+	$results = mysqli_query($dbc, $query);
+	check_results($results);
+
+	# Show results
+	if($results){
+		while ($row = mysqli_fetch_array($results, MYSQLI_ASSOC)) {
+	    $records += $row;
+		}
+	}
+
+	// use wordwrap() if lines are longer than 70 characters
+	$msg = wordwrap($msg,70);
+
+	// send email
+	mail("dgisolfiad@gmail.com","Backup",$msg);
+
+}
 ?>

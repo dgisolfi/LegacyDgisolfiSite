@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="bg-image"></div>
                 <div class="content-wrap">
                     <h1>Add Quote</h1>
-                    <p>Add a new quote to the list! All existing quotes can be found below. Context is not required all other fields are. Make sure the date is in YYYY-MM-DD format.</p>
+                    <p>Add a new quote to the list! All existing quotes can be found below. Context is not required all other fields are. Make sure the date is in YYYY-MM-DD format, and don't include the time.</p>
                 </div>
         </header>
 
@@ -52,10 +52,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <input id="text" name="author" value="<?php if(isset($_POST['author'])) echo $_POST['author'];?>" required>
                              <br>Quote<br>
                                 <input id="text" name="quote" value="<?php if(isset($_POST['quote'])) echo $_POST['quote'];?>" required>
+							 <br>Context<br>
+                                   <input id="text" name="q_descr" value="<?php if(isset($_POST['q_descr'])) echo $_POST['q_descr'];?>">
                              <br>Date<br>
                                 <input id="text" name="q_date" value="<?php if(isset($_POST['date'])) echo $_POST['date'];?>" placeholder="YYYY-MM-DD" required>
-                             <br>Context<br>
-                                <input id="text" name="q_descr" value="<?php if(isset($_POST['q_descr'])) echo $_POST['q_descr'];?>">
                              <br></br>
                                 <input id="button" class="btn" name="addQuote" type="submit" value="Add Quote">
                          </form>
