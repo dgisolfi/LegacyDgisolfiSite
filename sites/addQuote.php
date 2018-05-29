@@ -13,12 +13,12 @@ require('../scripts/showRecord.php');
 require('../scripts/deleteRecord.php');
 require('../scripts/search_db.php');
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-	if(isset($_POST['btnDelete'])) {
-		$id = $_POST['submit_btn_id'];
-		delete_quote_record($id, $dbc);
-	}
-}
+// if($_SERVER['REQUEST_METHOD'] == 'POST') {
+// 	if(isset($_POST['btnDelete'])) {
+// 		$id = $_POST['submit_btn_id'];
+// 		delete_quote_record($id, $dbc);
+// 	}
+// }
 ?>
   <head>
     <!-- Required meta tags -->
@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- navbar -->
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="bushmen.php">Bushmen</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -42,47 +42,72 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="bushmen.php">Quotes</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="addQuote.php">Add Quote</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>
     </ul>
-      <form method="POST" class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" name="SearchVAR" placeholder="Search" type="text" value="<?php if(isset($_POST['SearchVAR'])) echo $_POST['SearchVAR'];?>">
-        <button class="btn btn-secondary my-2 my-sm-0" name="search" type="submit">Search</button>
-      </form>
+
     </div>
   </nav>
 
     <div class="jumbotron jumbotron-fluid text-white bg-primary text-center">
         <div class="container" style="height="10%"">
-          <h1>Bushmen Quotes</h1>
-          <p>Words uttered by various members of the Bushmen throughout the years </p>
+          <h1>Add Quote</h1>
+          <p>Add a new quote to the list! All existing quotes can be found on the home page. Context is not required all however other fields are. Make sure the date is in YYYY-MM-DD format, and don't include the time.</p>
         </div>
     </div>
 
-    <div class="container text-muted">
+    <?php
+      if(isset($_POST['addQuote'])){
+        insert_quote_record($dbc);
+       }
+     ?>
 
-      <!-- cards -->
-      <?php
-      if(isset($_POST['SearchVAR'])){
-          searchRecord($dbc);
-      }else{
-        #run the query to show all quote records
-        $query = "defualt";
-        show_quote_records($dbc, $query);
-      }
+    <div class="container-fluid text-muted w-50">
+      <div class="card mb-3">
+        <h3 class="card-header">Add Record</h3>
+        <div class="card-body">
+        <div id="entryform" class="content-wrap">
+            <!-- <p class="card-text">Add a new quote to the list! All existing quotes can be found on the home page. Context is not required all however other fields are. Make sure the date is in YYYY-MM-DD format, and don't include the time.</p> -->
+            <form method="POST">
+              <div class="form-group row">
+                <label for="author" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                  <input class="form-control" id="text" name="author" value="<?php if(isset($_POST['author'])) echo $_POST['author'];?>" placeholder="John Doe" required>
+                </div>
+              </div>
 
-      # Close database connection
-      mysqli_close($dbc);
+              <div class="form-group row">
+                <label for="quote" class="col-sm-2 col-form-label">Quote</label>
+                <div class="col-sm-10">
+                  <input class="form-control" id="text" name="quote" value="<?php if(isset($_POST['quote'])) echo $_POST['quote'];?>" placeholder="Our God is an awesome God" required>
+                </div>
+              </div>
 
-       ?>
-    </div>
+              <div class="form-group row">
+                <label for="author" class="col-sm-2 col-form-label">Context</label>
+                <div class="col-sm-10">
+                  <input class="form-control" id="text" name="q_descr" value="<?php if(isset($_POST['q_descr'])) echo $_POST['q_descr'];?>" placeholder="While Drunk of Mead">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="author" class="col-sm-2 col-form-label">Date</label>
+                <div class="col-sm-10">
+                  <input class="form-control" name="q_date" type="date" value="<?php if(isset($_POST['q_date'])) echo $_POST['q_date'];?>" required>
+                </div>
+              </div>
+                 <input type="submit" class="btn btn-primary btn-lg btn-block" type="submit" name="addQuote" value="Add Quote">
+             </form>
+         </div>
+      </div>
+  </div>
 
     <div class="container">
       <footer id="footer">

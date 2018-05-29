@@ -15,4 +15,11 @@ function check_results($results) {
   return true ;
 }
 
+
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. $data .')';
+  echo '</script>';
+}
+
 ?>

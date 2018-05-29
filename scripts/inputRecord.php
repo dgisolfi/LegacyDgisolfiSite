@@ -38,6 +38,7 @@ function insert_quote_record($dbc) {
 	$_POST['q_date'] = null;
 	$_POST['q_descr'] = null;
 
+  alert('Quote has been added to the Database');
 	// backupData($dbc);
 }
 
@@ -67,4 +68,31 @@ function backupData($dbc){
 	mail("dgisolfiad@gmail.com","Backup",$msg);
 
 }
+
+
+function alert($msg){
+
+  echo '<div class="modal">';
+  echo '<div class="modal-dialog" role="document">';
+  echo '<div class="modal-content">';
+  echo '<div class="modal-header">';
+  echo '<h5 class="modal-title">Alert</h5>';
+  echo '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
+  echo '<span aria-hidden="true">&times;</span>';
+  echo '</button>';
+  echo '</div>';
+  echo '<div class="modal-body">';
+  echo '  <p>'. $msg .'</p>';
+  echo '</div>';
+  echo '<div class="modal-footer">';
+  echo '<button type="button" class="btn btn-primary">Save changes</button>';
+  echo '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
+  echo '</div>';
+  echo '</div>';
+  echo '</div>';
+  echo '</div>';
+
+}
+
+
 ?>

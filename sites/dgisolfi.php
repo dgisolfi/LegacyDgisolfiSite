@@ -6,9 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>dgisolfi</title>
-
-         <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- media icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- devicons -->
@@ -20,45 +17,33 @@
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-        <!-- Scrollbar Custom CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-        <!--  Custom CSS -->
-        <link rel="stylesheet" href="../xcss/style.css">
+
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <div class="wrapper">
-            <!-- Sidebar Holder -->
-            <nav id="sidebar" data-spy="affix">
-                <div class="sidebar-header">
-                    <h3>dgisolfi</h3>
-                </div>
-                <!-- <img class="img-profile" src="img/profile.jpg" alt=""> -->
-                <img class="img-profile"  src="https://avatars3.githubusercontent.com/u/25212184?s=460&amp;v=4">
-                <div class="sidebar-img">
+        <!-- Navbar -->
+        <nav class="navbar" >
+            <div id="topNav">
+              <a href="#dgisolfi" class="active">dgisolfi</a>
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#education">Education</a>
+              <a href="javascript:void(0);" style="font-size:2rem;" class="icon" onclick="resizeNav()">&#9776;</a>
+            </div>
+        </nav>
 
-                </div>
-
-                <ul class="list-unstyled components">
-
-                    <li class="active">
-                          <li><a href="#about">About</a></li>
-                          <li><a href="#experience">Experience</a></li>
-                          <li><a href="#skills">Skills</a></li>
-                          <li><a href="#projects">Projects</a></li>
-                          <li><a href="#education">Education</a></li>
-                    </li>
-            </nav>
-
-            <!-- Page Content Holder -->
-            <div id="content">
+        <!-- Page Content Holder -->
+        <div id="content">
               <section id="about">
-                <h1 class="mb-0">Daniel
+                <h1>Daniel
                   <span class="text-primary">Gisolfi</span>
                 </h1>
-                <div class="subheading mb-5">Marist College ·
+                <div class="subheading">Marist College ·
                   <a href="mailto:name@email.com">Daniel.Gisolfi1@marist.edu</a>
                   <p></p>
-                  <p class="mb-5">I am experienced in a range of languages and frameworks
+                  <p>I am experienced in a range of languages and frameworks
                     and am creating new projects to learn and master new languages. Programming
                     is a hobby of mine. All personal projects can be found and forked from Github.</p>
                 </div>
@@ -172,12 +157,15 @@
                       </div>
               </section>
           </div>
-
-        <!-- jQuery CDN -->
-       <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-       <!-- Bootstrap Js CDN -->
-       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-       <!-- Custom Scroller Js CDN -->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+          <script>
+          function resizeNav() {
+              var x = document.getElementById("topNav");
+              if (x.className === "navbar") {
+                  x.className += " responsive";
+              } else {
+                  x.className = "navbar";
+              }
+          }
+          </script>
     </body>
 </html>
