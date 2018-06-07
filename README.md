@@ -1,6 +1,5 @@
 # dgisolfi-site
-a personal page that is hosted on a LAMP stack and provides a environment to host any future web apps
-
+A personal page that is hosted in a docker image with a PHP and Ubuntu environment
 ### Author
 
 Daniel Gisolfi - All current work - dgisolfi
@@ -9,34 +8,26 @@ Daniel Gisolfi - All current work - dgisolfi
 
 All requirements to run an instance of this project
 
-- Bootstrap
+- Bootstrap 4
 - HTML 5
 - Digital Ocean or an equivalent service
-- mysql or a equivelant database
 - Docker
 
 ## Deployment
 
-Currently this site exists on a Digital Ocean droplet. The droplet is pointed at the domain name: [dgisolfi.xyz](http://www.dgisolfi.xyz/sites/dgisolfi.php)
+Currently, this site exists on a Digital Ocean droplet. The droplet is pointed at the domain name: [dgisolfi.xyz](http://www.dgisolfi.xyz)
 
 ## Docker Implementation
 
-The sites are currently taking advanatge of docker containers, each site and  database in its own. To set this schema up I first built all docker images from there Dockerfiles:
+The site is currently taking advantage of a Docker container. The Dockerfile in the repository specifies, when building the image, what needs to be installed in the container as well as what files need to be copied over and to where.
 
-```docke
-docker build -t dgisolfi-site .
-docker build -t bushmen-site .
-docker build -t mysql-server .
+To run an instance of the image execute the deploy_dgisolfi.sh file located in the repository. The script executes the commands below
+
+```dockerfile
+docker pull dgisolfi/dgisolfi-site
+docker run --rm --name dgisolfi_prod -p 80:80 dgisolfi/dgisolfi-site
 ```
-
-Next I ran each individual contianer with their apppropriate volumes
-
-```Docker
-docker run -d  --name="dgisolfi-server" -p80:80 -v /Users/daniel/code-repos/dgisolfi-site/dgisolfi/src:/var/www/html/ dgisolfi-site
-
-docker run -d  --name="bushmen-server" -p81:80 -v /Users/daniel/code-repos/dgisolfi-site/bushmen/src:/var/www/html/ bushmen-site
-```
-
+If necessary the port that the container is pointing to can be changed, do so change the first "80" to whatever port is desired to be used outside of the container.
 
 
 ## Goals
@@ -47,3 +38,5 @@ The following are possible additions and goals I would like to meet with this pr
 - A basic understanding of creating and implementing a fully complete site
 - A better understanding of Bootstrap and the possible advantages
 - A testing ground for any future web apps 
+- An opportunity to gain more experience in Docker
+- Additional practice creating makefiles
