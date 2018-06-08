@@ -43,8 +43,8 @@ dev_container:
 	@# This command should be run from the local computer
 	@echo "\n Creating Docker container"
 	@#docker pull ${DOCKER_IMAGE}
-	@docker run -it --name dgisolfi_devtest --rm -p 80:80 -v ${PWD}:/DNG ${DOCKER_IMAGE} bash
-	@#docker run --rm -p 80:80 -v /Users/daniel/code-repos/dgisolfi-site/src:/var/www/html/ dgisolfi-site
+	@#docker run -it --name dgisolfi_devtest --rm -p 80:80 -v ${PWD}:/DNG ${DOCKER_IMAGE} bash
+	@docker run --rm -p 80:80 -v /Users/daniel/code-repos/dgisolfi-site/src:/var/www/html/ dgisolfi-site
 publish_image: docker_image
 	@echo "\n				Create dgisolfi-site docker image..."
 	@docker login

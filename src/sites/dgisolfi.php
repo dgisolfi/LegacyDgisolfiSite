@@ -21,14 +21,15 @@
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     </head>
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
             <a class="navbar-brand" href="dgisolfi.php">dgisolfi</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
 
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <ul class="navbar-nav">
@@ -61,13 +62,14 @@
                         <div class="col-md-8">
                             <h1>Daniel<span class="text-info"> Gisolfi</span></h1>
                             <p style="padding: 10px; padding-bottom: 4px;">
-                                Welcome to my website! I am a researcher for the IBM / Marist Joint study and
-                                an avid developer in my free time. I devlop bots, websites, and other fun Programming
-                                projects in my free time in order to expand my skill set. Currently in my third year at
-                                Marist College as a Computer Science major I research blockchain technology as well as
-                                active and non-active honeypot technology. As a result of programing both blockchain and
-                                honeypot applications I have aquired a large range of skills with current and upcoming
-                                technologies. All personal projects can be found and forked from Github.
+                             Welcome to my website! I am a researcher for the IBM / Marist Joint Study and I am
+                             an avid developer during my free time. With my spare time I develop bots, websites, and other fun programming
+                             projects in order to expand my skill set. I am currently in my third year
+                             at Marist College as a Computer Science major. At the IBM / Marist Joint
+                             Study, I am researching blockchain as active and non-active honeypot technologies.
+                             As a result of programing both blockchain and honeypot applications, I have acquired
+                             a large range of skills with current and upcoming technologies. All personal projects can be
+                             found and forked from <a href="https://github.com/dgisolfi">GitHub</a>.
                             </p>
                         </div>
                     </div>
@@ -79,6 +81,21 @@
             <div class="container-fluid">
                 <div class="jumbotron">
                     <h3 class="display-5 text-info">Experience</h3>
+                    <h3 class="display-6">Blockchain Researcher</h3>
+                        <div>IBM / Marist Joint Study</div>
+                        <div class="text-primary">
+                            <p class="text-primary">January 2017 - Present</p>
+                          <p>
+                              Working as a researcher on a wide range of technologies for the IBM joint study with Marist College.
+                            <div class="container">
+                                <li>Researching Blockchain technologies such as Bitcoin, Ethereum</li>
+                                <li>Developing blockchain API and front-end user interfaces</li>
+                                <li>  Designing and programming honeypots for gathering data from hackers</li>
+                                <li>Researching the possible applications of Blockchain in business and academic settings</li>
+                            </div>
+                        </p>
+                    </div>
+                    <hr>
                     <h3 class="display-6">Help Desk Operator</h3>
                         <div>Marist College IT Client Services</div>
                           <div class="text-primary">
@@ -88,30 +105,14 @@
                                 on the phone, and via e-mail with various software and hardware.
                                 Used a help desk proccessor within the mainframe to create customer
                                 service requests.
-                                <div class="container">
-                                    <li>Provide excellent customer service</li>
-                                    <li>Reset user's passwords</li>
-                                    <li>Conduct problem determination for technology across campus</li>
-                                    <li>Train Incoming IT support student employees</li>
-                                </div>
-                            </p>
-                          </div>
-                          <hr>
-                    <h3 class="display-6">Blockchain Researcher</h3>
-                        <div>IBM / Marist Joint Study</div>
-                        <div class="text-primary">
-                            <p class="text-primary">January 2017 - Present</p>
-                          <p>
-                            Supporting college faculty, staff, and students in person, on the phone, and via e-mail with various software and hardware.
-                            Used a help desk proccessor within the mainframe to create customer service requests.
                             <div class="container">
-                                <li>Researching Blockchain technologies such as Bitcoin, Ethereum</li>
-                                <li>Building upon a custom built SDK using Java 8</li>
-                                <li>Creating Scalable front end demo webpages using Javascript React</li>
-                                <li>Researching the possible applications of Blockchain in business and academic settings</li>
+                                <li>Provide excellent customer service</li>
+                                <li>Reset user's passwords</li>
+                                <li>Conduct problem determination for technology across campus</li>
+                                <li>Train Incoming IT support student employees</li>
                             </div>
                         </p>
-                    </div>
+                      </div>
                 </div>
             </div>
         </div>
@@ -125,7 +126,6 @@
                             Most are still under development and serve as learning oppurtunitys
                         </p>
                     </div>
-
 
                     <div class="text-primary">
 
@@ -199,7 +199,7 @@
                 <div class="jumbotron">
                     <h3 class="display-5 text-info">Skills</h3>
                     <p>Programing languages & Tools</p>
-                    <div style="font-size: 8rem; opacity: 0.7; color: #4080bf;">
+                    <div class="text-center" style="font-size: 8rem; opacity: 0.7; color: #4080bf;">
                           <i class="devicon-docker-plain-wordmark"></i>
                           <i class="devicon-git-plain-wordmark"></i>
                           <i class="devicon-mysql-plain-wordmark"></i>
@@ -208,12 +208,13 @@
                           <i class="devicon-nodejs-plain"></i>
                           <i class="devicon-html5-plain"></i>
                           <i class="devicon-heroku-original-wordmark"></i>
+                          <i class="devicon-java-plain-wordmark"></i>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container" id="projects">
+        <div class="container" id="education">
             <div class="container-fluid">
                 <div class="jumbotron">
                     <div><h3 class="text-info">Education</h3></div>
