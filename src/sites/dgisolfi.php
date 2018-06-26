@@ -66,7 +66,7 @@
                              an avid developer during my free time. With my spare time I develop bots, websites, and other fun programming
                              projects in order to expand my skill set. I am currently in my third year
                              at Marist College as a Computer Science major. At the IBM / Marist Joint
-                             Study, I am researching blockchain as active and non-active honeypot technologies.
+                             Study, I am researching blockchain as well as active and non-active honeypot technologies.
                              As a result of programing both blockchain and honeypot applications, I have acquired
                              a large range of skills with current and upcoming technologies. All personal projects can be
                              found and forked from <a href="https://github.com/dgisolfi">GitHub</a>.
