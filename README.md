@@ -1,8 +1,8 @@
-# dgisolfi-site
-A personal page that is hosted in a docker image with a PHP and Ubuntu environment
+# DgisolfiSite
+A personal web page that is hosted in a docker container with a PHP and Apache environment
 ### Author
 
-Daniel Gisolfi - All current work - dgisolfi
+*Daniel Gisolfi - All current work - dgisolfi*
 
 ## Prerequisites
 
@@ -27,8 +27,7 @@ To run an instance of the image execute the deploy_dgisolfi.sh file located in t
 docker pull dgisolfi/dgisolfi-site
 docker run --rm --name dgisolfi_prod -p 80:80 dgisolfi/dgisolfi-site
 ```
-If necessary the port that the container is pointing to can be changed, do so change the first "80" to whatever port is desired to be used outside of the container.
-
+If necessary the port that the container is pointing to can be changed, to do so change the first "80" to the port desired to be used outside of the container.
 
 ## Goals
 

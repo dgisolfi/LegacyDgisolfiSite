@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     </head>
     <body>
 
@@ -30,7 +31,6 @@
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button> -->
-
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
@@ -66,7 +66,7 @@
                              an avid developer during my free time. With my spare time I develop bots, websites, and other fun programming
                              projects in order to expand my skill set. I am currently in my third year
                              at Marist College as a Computer Science major. At the IBM / Marist Joint
-                             Study, I am researching blockchain as well as active and non-active honeypot technologies.
+                             Study, I am researching blockchain as well as high and low level interaction honeypot technologies.
                              As a result of programing both blockchain and honeypot applications, I have acquired
                              a large range of skills with current and upcoming technologies. All personal projects can be
                              found and forked from <a href="https://github.com/dgisolfi">GitHub</a>.
@@ -85,15 +85,17 @@
                         <div>IBM / Marist Joint Study</div>
                         <div class="text-primary">
                             <p class="text-primary">January 2017 - Present</p>
-                          <p>
+                            <p>
                               Working as a researcher on a wide range of technologies for the IBM joint study with Marist College.
-                            <div class="container">
-                                <li>Researching Blockchain technologies such as Bitcoin, Ethereum</li>
-                                <li>Developing blockchain API and front-end user interfaces</li>
-                                <li>  Designing and programming honeypots for gathering data from hackers</li>
-                                <li>Researching the possible applications of Blockchain in business and academic settings</li>
-                            </div>
-                        </p>
+                                <div class="container">
+                                    <li>Researching malicious attacks and possible vulnerabilities by creating honeypots to gather attack data</li>
+                                    <li>Creating a real-time data pipeline to provide Machine learning and data analytic tools with various malicious attack data </li>
+                                    <li>Writing and Implementing a custom API to serve as a point of interaction with a Data pipeline</li>
+                                    <li>Developinmg a data analytics tool for graphing, plotting and, analyzing incoming attacks across multiple honeypots</li>
+                                    <li>Researching Blockchain and exploring the technology as a data structure</li>
+                                    <li>Developing a real time web UI to diagram a dynamic network of peers on a Blockchain</li>
+                                </div>
+                            </p>
                     </div>
                     <hr>
                     <h3 class="display-6">Help Desk Operator</h3>
@@ -105,13 +107,13 @@
                                 on the phone, and via e-mail with various software and hardware.
                                 Used a help desk proccessor within the mainframe to create customer
                                 service requests.
-                            <div class="container">
-                                <li>Provide excellent customer service</li>
-                                <li>Reset user's passwords</li>
-                                <li>Conduct problem determination for technology across campus</li>
-                                <li>Train Incoming IT support student employees</li>
-                            </div>
-                        </p>
+                                <div class="container">
+                                    <li>Provide excellent customer service</li>
+                                    <li>Reset user's passwords</li>
+                                    <li>Conduct problem determination for technology across campus</li>
+                                    <li>Train Incoming IT support student employees</li>
+                                </div>
+                            </p>
                       </div>
                 </div>
             </div>
@@ -140,7 +142,7 @@
                             <i class="devicon-php-plain"></i>
                         </div>
 
-                        <h4><a href="https://github.com/dgisolfi/dgisolfi-site">Personal Website</a></h4>
+                        <h4><a href="https://github.com/dgisolfi/DgisolfiSite">Personal Website</a></h4>
                         <p>dgisolfi.xyz, a personal webpage for myself. This site runs within a docker
                             container on a ubuntu virtual machine. I used this site and other small applications
                             to teach myself the basics of Docker as well as Ubuntu. Languages and Tools used
@@ -150,7 +152,28 @@
                             <i class="devicon-html5-plain"></i>
                         </div>
 
-                        <h4><a href="https://github.com/dgisolfi/MaristClassroomDirectory">Erin Message Bot</a></h4>
+                        <h4><a href="https://github.com/dgisolfi/ChatbotAPI">Chatbot API</a></h4>
+                            <p>
+                                This ChatBot API is used to send, receive, and interact with GroupMe Bots. This allows me
+                                to create multiple bots for various purposes and use this as a single point of interaction.
+                                Languages and Tools used for this project:
+                            </p>
+                            <div class="text-center" style="font-size: 3rem; opacity: 0.7; color: #4080bf;">
+                                <i class="devicon-python-plain-wordmark"></i>
+                                <i class="devicon-docker-plain-wordmark"></i>
+                            </div>
+                        
+                        <h4><a href="https://github.com/dgisolfi/MartyGroupmeChatbot">Marty Groupme chatbot</a></h4>
+                          <p>A Python bot using my custom <a href="https://github.com/dgisolfi/ChatbotAPI">
+                            Chatbot API</a> to interact with users in GroupMe. The bot uses string 
+                            manipulation and to determine incoming messages and reply if necessary.
+                            Languages and Tools used for this project:</p>
+                            <div class="text-center" style="font-size: 3rem; opacity: 0.7; color: #4080bf;">
+                                <i class="devicon-python-plain-wordmark"></i>
+                                <i class="devicon-docker-plain-wordmark"></i>
+                            </div>
+
+                        <h4><a href="https://github.com/dgisolfi/ErinSMSBot">Erin Message Bot</a></h4>
                         <p>This is a minnimal one way(for now) chat bot.
                           It sends outgoing text-messages to whoever the contacts list is set as.
                           Currently I have a version of this running on a Heroku web server to run your
@@ -179,16 +202,6 @@
                               <i class="devicon-nodejs-plain"></i>
                               <i class="devicon-html5-plain"></i>
                           </div>
-
-                        <h4><a href="https://github.com/dgisolfi/marty-groupme-chatbot">Marty Groupme chatbot</a></h4>
-                          <p>A flask application running on Heroku to serve as a in chat
-                            bot for Groupme. The bot uses string manipulation and to determine incoming messages
-                            and reply if necessary
-                            <br>Languages and Tools used for this project:</p>
-                            <div class="text-center" style="font-size: 3rem; opacity: 0.7; color: #4080bf;">
-                                <i class="devicon-python-plain-wordmark"></i>
-                                <i class="devicon-heroku-original-wordmark"></i>
-                            </div>
                     </div>
                 </div>
             </div>
@@ -201,6 +214,7 @@
                     <p>Programing languages & Tools</p>
                     <div class="text-center" style="font-size: 8rem; opacity: 0.7; color: #4080bf;">
                           <i class="devicon-docker-plain-wordmark"></i>
+                          <i class="devicon-ubuntu-plain-wordmark"></i>
                           <i class="devicon-git-plain-wordmark"></i>
                           <i class="devicon-mysql-plain-wordmark"></i>
                           <i class="devicon-php-plain"></i>
@@ -219,7 +233,7 @@
                 <div class="jumbotron">
                     <div><h3 class="text-info">Education</h3></div>
                     <h4>Marist College</h3>
-                        <div>Degree in Bachelor of Computer Science</div>
+                        <div>Bachelor of Computer Science</div>
                         <div><p class="text-primary">August 2016 - May 2020</p></div>
 
                     <h4>John Jay Senior Highschool</h4>
